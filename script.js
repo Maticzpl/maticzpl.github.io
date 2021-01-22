@@ -69,13 +69,17 @@ function loadProjects()
         <p>
             ${config.shortDesc}
         </p>
+        <br clear>
+        <span style="text-align: left; display:block; margin:5px;">Creation Date: ${config.date}</span>
         <div sideways clear>
-            <span style="font-weight:bold; margin-right:5px;">Source: </span>
-            <a href="${config.link}" target="_blank">
+            <a href="${config.link}" target="_blank" >
+                <span style="font-weight:bold; margin-right:5px;" class="link-style">${config.eye ? 'Link' : 'Source Code'}: </span>
+            </a>
+            <a href="${config.link}" target="_blank" >
                 <img style="margin:0;" ${config.eye ? 'src="./assets/eye.png"': 'src="./assets/github logo.png"'} width='30px' class="invert"/>
             </a>
-            <span style="text-align: center; margin-left:10px;">Creation Date: ${config.date}</span>
         </div>
+        
         <section id="info${index}" class="info" style="display:none;">
             ${config.desc}
         </section>

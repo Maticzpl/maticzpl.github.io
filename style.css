@@ -18,6 +18,14 @@
     clear:both;
 }
 
+.link-style{    
+    text-decoration: underline;
+}
+a :hover{    
+    transition-duration: 0.2s;
+    transform: scale(1.05);
+}
+
 body{ 
     background-color: #111;
     font-family: 'Roboto', sans-serif;
