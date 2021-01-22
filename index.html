@@ -1,0 +1,97 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Mateusz Czernecki</title>
+        <meta name="author" content="Mateusz Czernecki">
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="mobile.css">
+
+        <script src="script.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body onscroll="scroll();" onload="scroll(); loadProjects();">        
+        <div id="container">
+            <!--<div id="background">
+                <img class="layer1" src="./assets/circle.svg" />
+                <img class="layer2" src="./assets/circle.svg" />
+            </div>-->
+
+            <header>
+                MATEUSZ CZERNECKI
+                <div id="links">
+                    <a href="https://github.com/Maticzpl" target="_blank">
+                        <img class="invert" src="./assets/github logo.png"/>
+                    </a>
+                </div>
+                <div id="languages" sideways>
+                    <img src="./assets/cpp.png"/>  
+                    <img src="./assets/html.png"/>  
+                    <img src="./assets/css.png"/>  
+                    <img src="./assets/js.png"/>
+                </div>
+            </header>
+
+            <div id="content">
+                <h1>PROJECTS</h1>
+                
+                <!--
+                    title,
+                    icon,
+                    shortDesc,
+                    desc,
+                    link,
+                    date
+                -->
+                <div class="project">
+                    <div title>The Cube Toy</div>
+                    <div icon>./assets/tpt3d.png</div>
+                    <div shortDesc>
+                        A falling sand game remade in 3D. Made with low level C++ with opengl.
+                    </div>
+                    <div desc>
+                        The Powder Toy 3D is a falling sand game remade in 3D.<br>
+                        We used OpenGL for the rendering.
+                        The simulation was made by dthusian.
+                    </div>
+                    <div link>https://github.com/Maticzpl/The-Powder-Toy-3D</div>
+                    <div date>2020</div>
+                </div>
+
+                <div class="project">
+                    <div title>The Towerer Website</div>
+                    <div icon>https://cyberevolver_studios.indie.af/the-towerer/favicon.png</div>
+                    <div shortDesc>
+                        A website i made for a game called "The Towerer"
+                    </div>
+                    <div desc>
+                        <p>
+                            <h1>Features:</h1>
+                            <ul style="list-style-type: circle; margin-left:20px;">
+                                <li>Changing background</li>
+                                <li>Display full image</li>
+                                <li>Navigation buttons scroll</li>
+                                <li>Responsive Design</li>
+                            </ul>
+                            
+                        </p>
+                    </div>
+                    <div link eye>https://cyberevolver_studios.indie.af/the-towerer/</div>
+                    <div date>2020</div>
+                </div>
+
+                
+
+            </div>
+        </div>
+    </body>
+</html>

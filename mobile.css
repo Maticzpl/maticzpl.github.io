@@ -1,0 +1,44 @@
+@media (max-width: 650px) {
+    header{
+        font-size:10vw;
+    
+        height:250px;
+    }
+
+
+    #languages > *{
+        max-width:40px;
+        max-height:40px; 
+        margin:5px;   
+    }
+
+    #content{
+        width:90%;
+    }
+    .project{
+        width:95%;
+        text-align: center;
+    }
+    .project img{
+        clear:both;
+        float:none;
+        display:block;
+        margin:auto;
+    }
+
+    section{
+        text-align: justify;
+    }
+}
+
+
+/*For bigger screens*/
+@media (min-width: 900px){
+    .project{
+        font-size: x-large;
+    }
+
+    .project h2{
+        font-size: xx-large;
+    }
+}
