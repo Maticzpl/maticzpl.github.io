@@ -14,6 +14,9 @@
     align-items: center;
     margin:0;
 }
+*[clear]{
+    clear:both;
+}
 
 body{ 
     background-color: #111;
