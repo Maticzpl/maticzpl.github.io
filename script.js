@@ -34,7 +34,8 @@ function loadProjects()
             desc:undefined,
             link:undefined,
             date:undefined,
-            eye:undefined
+            eye:undefined,
+            state:undefined
         };
 
         for (let ind = 0; ind < element.children.length; ind++) {
@@ -55,13 +56,16 @@ function loadProjects()
             else if (child.hasAttribute('link')) 
                 config.link     =   child.innerHTML;
             else if (child.hasAttribute('date')) 
-                config.date     =   child.innerHTML
+                config.date     =   child.innerHTML;
+            else if (child.hasAttribute('state')) 
+                config.state     =  child.innerHTML;
 
         }
         element.setAttribute('style','display:block');
         element.innerHTML = `
         <img src="${config.icon}"/>
         <h2>${config.title}</h2>
+        <span style="font-weight:bold; margin:0;">Project Status: ${config.state}</span>
         <p>
             ${config.shortDesc}
         </p>
