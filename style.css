@@ -109,6 +109,8 @@ h1{
 
 /* Project sections */
 .project{
+    display:none;
+
     width:90%;
 
     margin:auto;
