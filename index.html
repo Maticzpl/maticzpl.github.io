@@ -5,8 +5,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Mateusz Czernecki</title>
+        <title>Mateusz Czernecki - Developer</title>
         <meta name="author" content="Mateusz Czernecki">
+        <meta property="og:title" content="Mateusz Czernecki - Developer" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://maticzpl.github.io" />
+        <meta property="og:image" content="https://maticzpl.github.io/assets/favicon.png" />
+        <!--<meta property="og:description" content="" />
+        <meta name="theme-color" content="#FF0000">-->
+        <meta name="twitter:card" content="https://maticzpl.github.io/assets/favicon.png">
+        
+        <link rel="icon" type="image/png" href="https://maticzpl.github.io/assets/favicon.png">
+
 
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="mobile.css">
@@ -30,7 +40,7 @@
 
             <header>
                 MATEUSZ CZERNECKI
-                <a href="mailto:czerneckimateusz0@gmail.com" style="font-size:30px;" target="_blank">
+                <a href="mailto:czerneckimateusz0@gmail.com" style="font-size:30px; font-family: 'Roboto', sans-serif;" target="_blank">
                     czerneckimateusz0@gmail.com
                 </a>
                 <div id="links">
@@ -54,19 +64,25 @@
                     icon,
                     shortDesc,
                     desc,
-                    link,
-                    date
+                    link, (eye optional)
+                    date,
+                    state
                 -->
                 <div class="project">
                     <div title>The Cube Toy</div>
                     <div icon>./assets/tpt3d.png</div>
                     <div shortDesc>
-                        "Falling sand" game but in 3D. Made with low level C++ with opengl.
+                        "Falling sand" game in 3D. Made with low level C++ with opengl.
                     </div>
                     <div desc>
-                        The Powder Toy 3D is a falling sand game remade in 3D.<br>
-                        We used OpenGL for the rendering.
-                        The simulation was made by dthusian.
+                        The Powder Toy 3D is a falling sand game remade in 3D.<br/>
+                        I did the graphics side of it which is:
+                        <ul style="list-style-type: circle; margin-left:20px;">
+                            <li>Rendering the simulation</li>
+                            <li>GLSL Shaders</li>
+                            <li>User interface</li>
+                        </ul><br>
+                        I also did input handling and most of the ingame controlls.  
                     </div>
                     <div link>https://github.com/Maticzpl/The-Powder-Toy-3D</div>
                     <div date>2020</div>
@@ -80,16 +96,13 @@
                         A website i made for a game called "The Towerer"
                     </div>
                     <div desc>
-                        <p>
-                            <h1>Features:</h1>
-                            <ul style="list-style-type: circle; margin-left:20px;">
-                                <li>Changing background</li>
-                                <li>Display full image</li>
-                                <li>Navigation buttons scroll</li>
-                                <li>Responsive Design</li>
-                            </ul>
-                            
-                        </p>
+                        <h1>Features:</h1>
+                        <ul style="list-style-type: circle; margin-left:20px;">
+                            <li>Changing background</li>
+                            <li>Display full image</li>
+                            <li>Navigation buttons scroll</li>
+                            <li>Responsive Design</li>
+                        </ul>                            
                     </div>
                     <div link eye>https://cyberevolver_studios.indie.af/the-towerer/</div>
                     <div date>2020</div>

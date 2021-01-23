@@ -7,7 +7,6 @@
     margin:0;
     padding:0;
     color:white;
-    overflow-x: hidden; 
 }
 
 *[sideways]{
@@ -23,14 +22,11 @@
     text-decoration: underline;
 }
 
-a :hover{    
-    transition-duration: 0.2s;
-    transform: scale(1.05);
-}
 
 body{ 
     background-color: #111;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden; 
 }
 
 #container{
@@ -38,6 +34,7 @@ body{
     height:fit-content;
     height: -moz-fit-content;
     min-height: 1000px;
+    overflow-x: visible; 
 }
 
 /* BACKGROUND */
@@ -200,7 +197,7 @@ h1{
         overflow: hidden;
     }    
     99%{        
-        overflow: auto;
+        overflow: hidden;
     }
     to {
         display:block;height:var(--info-height);   

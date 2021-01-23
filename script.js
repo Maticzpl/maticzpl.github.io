@@ -62,6 +62,8 @@ function loadProjects()
 
         }
         element.setAttribute('style','display:block');
+
+
         element.innerHTML = `
         <img src="${config.icon}"/>
         <h2>${config.title}</h2>
