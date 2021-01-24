@@ -49,26 +49,6 @@ body{
 }
 #background > * {position: absolute; z-index: -1; transition-duration: 0s;}
 
-.layer1{    
-    --scroll-ammount: calc(var(--scroll)*0.7);
-    top: calc(var(--scroll-ammount) + 100px);
-    
-    width:100%;
-}
-.layer2{    
-    
-    --scroll-ammount: calc(var(--scroll)*0.9);
-    top: calc(var(--scroll-ammount) - 100px);
-    filter:brightness(0.7);
-
-    width:150%;
-
-    left:-10%;
-
-    transform: rotateZ(5deg);
-}
-
-
 /* Title */
 header{    
     font-family: 'Raleway', sans-serif;
