@@ -29,6 +29,16 @@
     section{
         text-align: justify;
     }
+
+
+    .layer1, .layer2{
+        display:none;
+    }
+    #email{
+        font-size: 20px;
+    }
+
+
 }
 
 

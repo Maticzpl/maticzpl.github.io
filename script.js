@@ -35,7 +35,8 @@ function loadProjects()
             link:undefined,
             date:undefined,
             eye:undefined,
-            state:undefined
+            state:undefined,
+            tech:undefined
         };
 
         for (let ind = 0; ind < element.children.length; ind++) {
@@ -48,48 +49,83 @@ function loadProjects()
             if (child.hasAttribute('title')) 
                 config.title    =   child.innerHTML;
             else if (child.hasAttribute('icon')) 
-                config.icon     =   child.innerHTML;
+                config.icon     =   child.innerText;
             else if (child.hasAttribute('shortDesc')) 
                 config.shortDesc=   child.innerHTML;
             else if (child.hasAttribute('desc')) 
                 config.desc     =   child.innerHTML;
             else if (child.hasAttribute('link')) 
-                config.link     =   child.innerHTML;
+                config.link     =   child.innerText;
             else if (child.hasAttribute('date')) 
-                config.date     =   child.innerHTML;
+                config.date     =   child.innerText;
             else if (child.hasAttribute('state')) 
-                config.state     =  child.innerHTML;
+                config.state     =  child.innerText;
+            else if (child.hasAttribute('tech')) 
+                config.tech     =  child.innerText.split(',');
 
         }
         element.setAttribute('style','display:block');
+  
+        let technologies = "";
+        //Create all the tech buttons
+        if (config.tech) {           
 
+            config.tech.forEach(element => {
+                technologies += `<div class="button">${element}</div>`
+            }); 
+        }
 
-        element.innerHTML = `
-        <img src="${config.icon}"/>
-        <h2>${config.title}</h2>
-        <span style="font-weight:bold; margin:0;">Project Status: ${config.state}</span>
-        <p>
-            ${config.shortDesc}
-        </p>
-        <br clear>
-        <span style="text-align: left; display:block; margin:5px;">Creation Date: ${config.date}</span>
-        <div sideways clear>
-            <a href="${config.link}" target="_blank" >
-                <span style="font-weight:bold; margin-right:5px;" class="link-style">${config.eye ? 'Link' : 'Source Code'}: </span>
-            </a>
-            <a href="${config.link}" target="_blank" >
-                <img style="margin:0;" ${config.eye ? 'src="./assets/eye.png"': 'src="./assets/github logo.png"'} width='30px' class="invert"/>
-            </a>
-        </div>
-        
-        <section id="info${index}" class="info" style="display:none;">
-            ${config.desc}
-        </section>
-        <div class="more-info" onclick="expand('info${index}','arrow${index}')">
-            <span id="arrow${index}" class="material-icons">
-                keyboard_arrow_down
-            </span>
-        </div>`;
+        //Write html
+        {
+            element.innerHTML = ''; //Clear the inside
+            
+            element.innerHTML += `<img src="${config.icon}"/>`;
+            element.innerHTML += `<h2>${config.title}</h2>`;
+            
+            if (config.state)
+                element.innerHTML +=`
+                <span style="font-weight:bold; margin:0;">
+                Project Status: ${config.state}
+                </span>`;
+            
+            if (config.shortDesc)
+                element.innerHTML += `<p>${config.shortDesc}</p>`;
 
+            element.innerHTML += `<br clear>`;
+
+            if (config.link)
+                element.innerHTML +=`
+                <div sideways clear class="button">
+                    <a href="${config.link}" target="_blank" >
+                        <span style="font-weight:bold; margin-right:5px;" class="link-style">
+                            ${config.eye ? 'See The Result' : 'Source Code'}:
+                        </span>
+                    </a>
+                    <a href="${config.link}" target="_blank" >
+                        <img style="margin:0;" 
+                        ${config.eye ? 'src="./assets/eye.png"': 'src="./assets/github logo.png"'}
+                        width='30px' class="invert"/>
+                    </a>
+                </div>`
+
+            if (config.tech)
+                element.innerHTML +=`<div sideways>${technologies}</div>`  
+
+            if (config.date)
+                element.innerHTML += `
+                <span style="text-align: left; display:block; margin:5px;">
+                    Creation Date: ${config.date}
+                </span>`
+            
+            element.innerHTML += `
+            <section id="info${index}" class="info" style="display:none;">
+                ${config.desc}
+            </section>      
+            <div class="more-info" onclick="expand('info${index}','arrow${index}')">
+                <span id="arrow${index}" class="material-icons">
+                    keyboard_arrow_down
+                </span>
+            </div>`;
+        }
     }
 }
