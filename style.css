@@ -83,13 +83,15 @@ h1{
     filter:invert(1);
 }
 #languages{
+    display:flex;
+    justify-content: space-evenly;
     background-color: #FFFFFF0F;
 
     padding:10px;
     margin:auto;
 
-    width:fit-content;
-    width: -moz-fit-content;
+    width: 60%;
+    max-width: 900px;
 
     border-radius: 5px;
 }

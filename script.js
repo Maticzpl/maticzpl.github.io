@@ -79,12 +79,14 @@ function loadProjects()
         {
             element.innerHTML = ''; //Clear the inside
             
-            element.innerHTML += `<img src="${config.icon}"/>`;
+            if (config.icon)            
+                element.innerHTML += `<img src="${config.icon}"/>`;
+            
             element.innerHTML += `<h2>${config.title}</h2>`;
             
             if (config.state)
                 element.innerHTML +=`
-                <span style="font-weight:bold; margin:0;">
+                <span style="font-weight:bold; margin:0; ${config.icon ? "" : "margin-left:7px;"}">
                 Project Status: ${config.state}
                 </span>`;
             
