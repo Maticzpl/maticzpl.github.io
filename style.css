@@ -23,9 +23,18 @@
 }
 
 
+::-webkit-scrollbar{
+    background-color: #FFFFFF05;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #FFFFFF2B;
+    border-radius: 2px;
+}
+
 body{ 
     background-color: #111;
     font-family: 'Roboto', sans-serif;
+    overflow: overlay;
     overflow-x: hidden; 
     max-width: 100%;
 }
@@ -50,11 +59,22 @@ body{
 #background > * {position: absolute; z-index: -1; transition-duration: 0s;}
 
 /* Title */
+
+#splash{
+    width:100vw;
+    height:100vh;
+
+    background-image: url("./assets/background/banner.webp");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 header{    
     font-family: 'Raleway', sans-serif;
     font-size:100px;
 
-    min-height:500px;
+    height: fit-content;
+    height: -moz-fit-content;
 
     margin:auto;
     text-align: center;
@@ -90,7 +110,8 @@ h1{
     padding:10px;
     margin:auto;
 
-    width: 60%;
+    width: fit-content;
+    width: -moz-fit-content;
     max-width: 900px;
 
     border-radius: 5px;
@@ -98,7 +119,7 @@ h1{
 #languages > *{
     max-width:50px;
     max-height:50px; 
-    margin:5px;   
+    margin:10px;   
 }
 
 /* Contents */
