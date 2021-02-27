@@ -13,6 +13,7 @@
         <meta property="og:url" content="https://maticzpl.github.io" />
         <meta property="og:image" content="https://maticzpl.github.io/assets/favicon.png" />
         <meta property="og:description" content="Hello i'm Mathew. Coding is my hobby since 2018. In general im doing C++, basic JS and Web Dev." />
+        <meta name="description" content="Hello i'm Mathew. Coding is my hobby since 2018. In general im doing C++, basic JS and Web Dev." />
         <meta name="theme-color" content="#57a1b9">
         <meta name="twitter:card" content="https://maticzpl.github.io/assets/favicon.png">
         
@@ -40,21 +41,21 @@
                 <header>
                     <p>MATEUSZ CZERNECKI</p>
 
-                    <a id="email" href="mailto:czerneckimateusz0@gmail.com" style="font-family: 'Roboto', sans-serif;" target="_blank">
+                    <a rel="noreferrer"  id="email" href="mailto:czerneckimateusz0@gmail.com" style="font-family: 'Roboto', sans-serif;" target="_blank">
                         czerneckimateusz0@gmail.com
                     </a>
                     <div id="links">
-                        <a href="https://github.com/Maticzpl" target="_blank">
-                            <img class="invert" src="./assets/github logo.png"/>
+                        <a rel="noreferrer"  href="https://github.com/Maticzpl" target="_blank">
+                            <img alt="github" class="invert" src="./assets/github logo.png"/>
                         </a>
                     </div>
                     
                     <div id="languages" sideways>
-                        <img src="./assets/cpp.png" title="C++"/>  
-                        <img src="./assets/html.png" title="HTML5"/>  
-                        <img src="./assets/css.png" title="CSS3"/>  
-                        <img src="./assets/js.png" title="JavaScript"/> 
-                        <img src="./assets/typescript.png" title="TypeScript"/>
+                        <img alt="C++" src="./assets/cpp.png" title="C++"/>  
+                        <img alt="HTML" src="./assets/html.png" title="HTML5"/>  
+                        <img alt="CSS" src="./assets/css.png" title="CSS3"/>  
+                        <img alt="JavaScript" src="./assets/js.png" title="JavaScript"/> 
+                        <img alt="TypeScript" src="./assets/typescript.png" title="TypeScript"/>
                     </div>
                 </header>
             </div>
@@ -108,24 +109,6 @@
                             <li>GLSL Shaders</li>
                             <li>User interface</li>
                         </ul><br>
-                        <h1>Devlog 07.02.2021</h1>
-                        Using OpenGL wasn't the best choice but I learned a lot. <br><br>
-                        I still dont have enough knowledge about OpenGL.
-                        Developing a system around a technology you don't fully understand
-                        brings many unexpected issues. <br><br>
-                        <a href="https://github.com/Maticzpl/The-Powder-Toy-3D/blob/master/src/rendering/renderable.h">
-                            Renderable.h
-                        </a> 
-                        was supposed to bring OpenGL to a bit higher level so i dont have to manage VBOs and VAOs manually.
-                        With every bit of new knowledge about OpenGL i found new issues in this file.
-                        They mainly come to adding new data and trying not to create a VBO for every single object.<br><br>
-                        Renderable was developed before writing the UI.
-                        With the current setup I would have to create a new VBO for every new part of the UI, which is inefficient.<br><br>
-                        Another thing is optimizing data updates. Currently i assemble an array of the datatypes I want to sent to the GPU.
-                        For the voxel part filling that array with data from the simulation takes a lot of time (size of the array is 2097152 * the datatype im sending).
-                        If I want to optimise that I would have to check which voxels are hidden behind other voxels and then don't add them.
-                        Doing that on CPU side also doesn't sound good.<br><br>
-                        I'm also concidering just rewriting the whole thing so I dont have to fill in a new array at all. 
                     </div>
                     <div link>https://github.com/Maticzpl/The-Powder-Toy-3D</div>
                     <div date>2020</div>

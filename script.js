@@ -80,7 +80,7 @@ function loadProjects()
             element.innerHTML = ''; //Clear the inside
             
             if (config.icon)            
-                element.innerHTML += `<img src="${config.icon}"/>`;
+                element.innerHTML += `<img alt="project icon" src="${config.icon}"/>`;
             
             element.innerHTML += `<h2>${config.title}</h2>`;
             
@@ -98,12 +98,12 @@ function loadProjects()
             if (config.link)
                 element.innerHTML +=`
                 <div sideways clear class="button">
-                    <a href="${config.link}" target="_blank" >
+                    <a rel="noreferrer"  href="${config.link}" target="_blank" >
                         <span style="font-weight:bold; margin-right:5px;" class="link-style">
                             ${config.eye ? 'See The Result' : 'Source Code'}:
                         </span>
                     </a>
-                    <a href="${config.link}" target="_blank" >
+                    <a rel="noreferrer"  href="${config.link}" target="_blank" >
                         <img style="margin:0;" 
                         ${config.eye ? 'src="./assets/eye.png"': 'src="./assets/github logo.png"'}
                         width='30px' class="invert"/>
